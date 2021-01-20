@@ -1,0 +1,46 @@
+require('dotenv').config();
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
+
+const apiRouter = require('./routes/apiRoute');
+const debtRouter = require('./routes/debtRoute');
+const expenseRouter = require('./routes/expenseRoute');
+const incomeRouter = require('./routes/incomeRoute');
+const paymentRouter = require('./routes/paymentRoute');
+const scheduleRouter = require('./routes/scheduleRoute');
+const userRouter = require('./routes/userRoute');
+
+const app = express();
+
+app.use(logger('dev'));
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/api', apiRouter);
+app.use('/debt', debtRouter);
+app.use('/expense', expenseRouter);
+app.use('/income', incomeRouter);
+app.use('/payment', paymentRouter);
+app.use('/schedule', scheduleRouter);
+app.use('/user', userRouter);
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.status(err.status || 500);
+});
+
+module.exports = app;
