@@ -1,4 +1,14 @@
-require('dotenv').config();
+// ./server.js
+
+/**
+ * Setup the dotenv library before anything else
+ */
+var dotenv = require('dotenv');
+var dotenvExpand = require('dotenv-expand');
+
+const env = dotenv.config();
+dotenvExpand(env);
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
