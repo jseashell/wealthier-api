@@ -20,7 +20,6 @@ const apiRouter = require('./routes/apiRoute');
 const debtRouter = require('./routes/debtRoute');
 const expenseRouter = require('./routes/expenseRoute');
 const incomeRouter = require('./routes/incomeRoute');
-const paymentRouter = require('./routes/paymentRoute');
 const scheduleRouter = require('./routes/scheduleRoute');
 const userRouter = require('./routes/userRoute');
 
@@ -37,7 +36,6 @@ app.use('/api', apiRouter);
 app.use('/debt', debtRouter);
 app.use('/expense', expenseRouter);
 app.use('/income', incomeRouter);
-app.use('/payment', paymentRouter);
 app.use('/schedule', scheduleRouter);
 app.use('/user', userRouter);
 
