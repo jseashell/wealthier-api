@@ -16,12 +16,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-const apiRouter = require('./routes/apiRoute');
-const debtRouter = require('./routes/debtRoute');
-const expenseRouter = require('./routes/expenseRoute');
-const incomeRouter = require('./routes/incomeRoute');
-const scheduleRouter = require('./routes/scheduleRoute');
-const userRouter = require('./routes/userRoute');
+const apiRouter = require('./routes/api-route');
+const debtRouter = require('./routes/debts-route');
+const expenseRouter = require('./routes/expenses-route');
+const incomeRouter = require('./routes/incomes-route');
+const scheduleRouter = require('./routes/schedule-route');
+const userRouter = require('./routes/user-route');
 
 const app = express();
 
@@ -33,9 +33,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', apiRouter);
-app.use('/debt', debtRouter);
-app.use('/expense', expenseRouter);
-app.use('/income', incomeRouter);
+app.use('/debts', debtRouter);
+app.use('/expenses', expenseRouter);
+app.use('/incomes', incomeRouter);
 app.use('/schedule', scheduleRouter);
 app.use('/user', userRouter);
 
