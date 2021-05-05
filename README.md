@@ -29,45 +29,21 @@ Runs unit tests using [Jest](https://github.com/facebook/jest).
 
 ## Endpoints
 
-### /debt
+### /api
 
-/debt/all - gets all rows from the Debt table
-
-/debt?id=<debt_id> - gets a single row from the Debt table by the row's primary key
-
-### /income
-
-/income/all - gets all rows from the Income table
-
-/income?id=<debt_id> - gets a single row from the Income table by the row's primary key
-
-### /expense
-
-/expense/all - gets all rows from the Expense table
-
-/expense?id=<debt_id> - gets a single row from the Expense table by the row's primary key
-
-### /payment
-
-/payment/all - gets all rows from the Payment table
-
-/payment?id=<debt_id> - gets a single row from the Payment table by the row's primary key
-
-### /schedule
-
-/schedule - gets a debt payment schedule based on bi-weekly income, debt, expenses, and debt payments.
+/api - Simply checks that the server is up and running
 
 ### /user
 
-/user/all - gets all rows from the User table
+/user/all - gets all users
 
-/user?id=<debt_id> - gets a single row from the User table by the row's primary key
+/user?id=<user_id> - gets a single user
 
 ## Technologies
 
 Bootstrapped with [express-generator](https://github.com/expressjs/express). 
 
-Data persistence implemented using MongoDB
+Data persistence is implemented using AWS DynamoDB.
 
 Other technologies:
 * [Jest](https://github.com/facebook/jest)
