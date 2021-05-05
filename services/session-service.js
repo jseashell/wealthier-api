@@ -1,11 +1,12 @@
 const session = require('express-session');
+const { v4: uuidv4 } = require('uuid');
 
 exports.newSession = () => {
   return session({
-    secret: 'todo', // TODO generate UUID
+    secret: uuidv4(),
     name: 'wealthier',
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
     cookie: {
       maxAge: 900000, // 15 minutes
     },
