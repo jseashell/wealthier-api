@@ -7,12 +7,9 @@
 * [Scripts](#scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
+* [Environment Variables](#environment-variables)
 * [Endpoints](#endpoints)
-  - [/debt](#/debt)
-  - [/income](#/income)
-  - [/expense](#/expense)
-  - [/payment](#/payment)
-  - [/schedule](#/debt)
+  - [/api](#/api)
   - [/user](#/user)
 * [Technologies](#technologies)
 * [License](#license)
@@ -27,6 +24,10 @@ Starts the web server. Hot reloading is enabled via [nodemon](https://github.com
 
 Runs unit tests using [Jest](https://github.com/facebook/jest).
 
+## Environment Variables
+
+* ```NODE_ENV``` {_string_} 'development' | 'production'
+* ```PORT``` {_number_} port to publish server on
 ## Endpoints
 
 ### /api
@@ -46,6 +47,7 @@ Bootstrapped with [express-generator](https://github.com/expressjs/express).
 Data persistence is implemented using AWS DynamoDB.
 
 Other technologies:
+* [Express Session](https://github.com/expressjs/express)
 * [Jest](https://github.com/facebook/jest)
 * [Lodash](https://github.com/lodash/lodash)
 * [Math.js](https://github.com/josdejong/mathjs)
