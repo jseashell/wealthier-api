@@ -1,7 +1,7 @@
 // ./routes/user-route.js
 
 const express = require('express');
-const { getItem, scan } = require('../services/aws-service');
+const { getItem, scan } = require('../services/database-service');
 
 const router = express.Router();
 

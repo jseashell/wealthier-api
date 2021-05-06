@@ -47,7 +47,6 @@ Bootstrapped with [express-generator](https://github.com/expressjs/express).
 Data persistence is implemented using AWS DynamoDB.
 
 Other technologies:
-* [Express Session](https://github.com/expressjs/express)
 * [Jest](https://github.com/facebook/jest)
 * [Lodash](https://github.com/lodash/lodash)
 * [Math.js](https://github.com/josdejong/mathjs)

@@ -1,4 +1,4 @@
-// ./services/aws-dynamo.js
+// ./services/database-service.js
 
 process.env.AWS_SDK_LOAD_CONFIG = true; // This env var doesn't work in the .env file, see https://stackoverflow.com/a/44699094/6194785
 const AWS = require('aws-sdk');
